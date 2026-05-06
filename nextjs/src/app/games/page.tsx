@@ -50,12 +50,12 @@ export default async function GamesPage({
 				{games.length === 0 ? (
 					<p className="text-muted-foreground">No games found in this category.</p>
 				) : (
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+					<div className="flex flex-wrap justify-center gap-6">
 						{games.map((game: any) => (
 							<Link
 								key={game.id}
 								href={`/games/${game.Slug}`}
-								className="group block rounded-lg border border-border hover:shadow-lg transition-all bg-background dark:bg-background-variant relative overflow-hidden"
+								className="group block rounded-lg border border-border hover:shadow-lg transition-all bg-background dark:bg-background-variant relative overflow-hidden w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] max-w-sm"
 							>
 								{game.Cover_Image && (
 									<div className="relative w-full h-48 overflow-hidden bg-muted">

@@ -91,9 +91,10 @@ const config: Config = {
 						},
 						img: {
 							borderRadius: '8px',
-							margin: '1rem 0',
+							margin: '1rem auto',
 							maxWidth: '100%',
 							height: 'auto',
+							display: 'block',
 						},
 						iframe: {
 							borderRadius: '8px',

@@ -102,7 +102,7 @@ const Gallery = ({ data }: GalleryProps) => {
 
 			{sortedItems.length > 0 && (
 				<div
-					className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+					className="mt-8 flex flex-wrap justify-center gap-6"
 					data-directus={setAttr({
 						collection: 'block_gallery',
 						item: id,
@@ -113,7 +113,7 @@ const Gallery = ({ data }: GalleryProps) => {
 					{sortedItems.map((item, index) => (
 						<div
 							key={item.id}
-							className="relative overflow-hidden rounded-lg group hover:shadow-lg transition-shadow duration-300 cursor-pointer h-[300px]"
+							className="relative overflow-hidden rounded-lg group hover:shadow-lg transition-shadow duration-300 cursor-pointer h-[300px] w-full sm:w-[calc(50%-1.5rem)] md:w-[calc(33.33%-1.5rem)]"
 							onClick={() => handleOpenLightbox(index)}
 							aria-label={`Gallery item ${item.id}`}
 						>
